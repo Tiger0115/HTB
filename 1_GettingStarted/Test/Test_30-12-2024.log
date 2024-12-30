@@ -1,0 +1,619 @@
+Script started on 2024-12-30 10:45:01-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="38"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "target= [7m10.129.68.89[27m10.129.68.89"
+[?2004l]0;echo "target= 10.129.68.89" - Parrot Terminaltarget= 10.129.68.89
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mnmap -sC -sV -F [7m10.129.68.89[27m10.129.68.89
+[?2004l]0;nmap -sC -sV -F 10.129.68.89 - Parrot TerminalStarting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-30 10:45 EST
+Nmap scan report for 10.129.68.89
+Host is up (0.016s latency).
+Not shown: 77 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE       VERSION
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+111/tcp  filtered rpcbind
+113/tcp  filtered ident
+135/tcp  filtered msrpc
+143/tcp  filtered imap
+199/tcp  filtered smux
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+554/tcp  filtered rtsp
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+1025/tcp filtered NFS-or-IIS
+1720/tcp filtered h323q931
+1723/tcp filtered pptp
+3306/tcp filtered mysql
+3389/tcp filtered ms-wbt-server
+5900/tcp filtered vnc
+8080/tcp filtered http-proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.32 seconds
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mgobuster dir -u http://[7m10.129.68.89[27m10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
+[?2004l]0;gobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt - Parrot Terminal===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.68.89/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.hta                [33m (Status: 403)[0m [Size: 277]
+[2K/.htpasswd           [33m (Status: 403)[0m [Size: 277]
+[2K/.htaccess           [33m (Status: 403)[0m [Size: 277]
+[2KProgress: 187 / 4724 (3.96%)[2KProgress: 386 / 4724 (8.17%)[2K/admin               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.129.68.89/admin/][0m
+[2KProgress: 613 / 4724 (12.98%)[2K/backups             [36m (Status: 301)[0m [Size: 314][34m [--> http://10.129.68.89/backups/][0m
+[2KProgress: 865 / 4724 (18.31%)[2KProgress: 1182 / 4724 (25.02%)[2K/data                [36m (Status: 301)[0m [Size: 311][34m [--> http://10.129.68.89/data/][0m
+[2KProgress: 1502 / 4724 (31.80%)[2KProgress: 1840 / 4724 (38.95%)[2KProgress: 2188 / 4724 (46.32%)[2K/index.php           [32m (Status: 200)[0m [Size: 5485]
+[2KProgress: 2526 / 4724 (53.47%)[2KProgress: 2865 / 4724 (60.65%)[2K/plugins             [36m (Status: 301)[0m [Size: 314][34m [--> http://10.129.68.89/plugins/][0m
+[2KProgress: 3206 / 4724 (67.87%)[2KProgress: 3493 / 4724 (73.94%)[2K/robots.txt          [32m (Status: 200)[0m [Size: 32]
+[2K/server-status       [33m (Status: 403)[0m [Size: 277]
+[2K/sitemap.xml         [32m (Status: 200)[0m [Size: 431]
+[2KProgress: 3841 / 4724 (81.31%)[2KProgress: 4047 / 4724 (85.67%)[2KProgress: 4122 / 4724 (87.26%)[2KProgress: 4122 / 4724 (87.26%)[2KProgress: 4122 / 4724 (87.26%)[2KProgress: 4122 / 4724 (87.26%)[2KProgress: 4122 / 4724 (87.26%)[2K/theme               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.129.68.89/theme/][0m
+[2KProgress: 4452 / 4724 (94.24%)[2KProgress: 4723 / 4724 (99.98%)
+===============================================================
+Finished
+===============================================================
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl [7m10.129.68.89[27m10.129.68.89
+[?2004l]0;curl 10.129.68.89 - Parrot Terminal<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" > <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+  <title>Welcome to GetSimple! - gettingstarted</title>
+	
+	<meta name="robots" content="index, follow">
+
+	<link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+	<link href="http://gettingstarted.htb/theme/Innovation/assets/css/reset.css" rel="stylesheet">
+	<link href="http://gettingstarted.htb/theme/Innovation/style.css?v=3.3.15" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	<!--[if lt IE 7 ]>
+    <script src="http://gettingstarted.htb/theme/Innovation/assets/js/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
+
+	<meta name="keywords" content="getsimple, easy, content management system" />
+<link rel="canonical" href="http://gettingstarted.htb/" />
+	
+</head> 
+<body id="index" >
+	
+	<!-- site header -->
+	<header>
+		<div class="header">
+			<div class="wrapper">
+				
+				<!-- logo/sitename -->
+				<a href="http://gettingstarted.htb/" id="logo" >gettingstarted</a>
+				
+				<!-- main navigation -->
+				<nav id="main-nav">
+					<ul>
+						<li class="index current active"><a href="http://gettingstarted.htb/" title="Welcome to GetSimple!">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<!-- breadcrumbs: only show when NOT on homepage -->
+		<p class="breadcrumbs" >
+			<span class="wrapper">
+				<a href="http://gettingstarted.htb/">Home</a> &nbsp;&nbsp;&#149;&nbsp;&nbsp;  <b>Welcome to GetSimple!</b>
+			</span>
+		</p>
+		
+  </header>	
+	<div class="wrapper clearfix">
+		<!-- page content -->
+		<article>
+			<section>
+				
+				<!-- title and content -->
+				<h1>Welcome to GetSimple!</h1>
+				<p>Thank you for using GetSimple CMS. This is your homepage, so please change this text to be what you want.</p>
+<ul>
+	<li><a href="http://get-simple.info/docs/">GetSimple CMS Documentation</a>
+		<ul>
+				<li><a href="http://get-simple.info/docs/theme-creation">How to Create a GetSimple Theme</a></li>
+		</ul>
+	</li>
+	<li><a href="http://get-simple.info/forums/">GetSimple Support Forums</a></li>
+</ul>
+<h2>Header 2</h2>
+<p>Lorem ipsum <em>dolor sit amet</em>, <strong>consectetur adipiscing elit</strong>. Donec <code>this is code</code> venenatis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate pretium augue.</p>
+<h3>Header 3</h3>
+<pre><code class="language-css">#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}</code></pre>
+<h4>Header 4</h4>
+<ol>
+	<li>Lorem ipsum dolor sit amet</li>
+	<li>Consectetur adipiscing elit</li>
+	<li>Donec ut est risus, placerat venenatis augue</li>
+</ol>
+
+<blockquote>A blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut est risus, placerat venenatis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
+				
+				<!-- page footer -->
+				<div class="footer">
+					<p>Published on <time datetime="2021-02-09" pubdate>February 9th, 2021</time></p>
+				</div>
+			</section>
+			
+		</article>
+		
+		<!-- include the sidebar template -->
+		<aside id="sidebar">
+
+	<div class="section" id="socialmedia" >
+		<h2>Connect</h2>
+		<div class="icons">
+						
+			<img src="http://gettingstarted.htb/theme/Innovation/assets/images/break.png" />
+			
+			<!-- addthis popup - you can add your username if you want analytics: http://www.addthis.com/help/customizing-addthis -->
+			<div class="addthis_toolbox" style="display:inline;width:24px;" >
+				<a href="//www.addthis.com/bookmark.php?v=250" class="addthis_button_compact"><img src="http://gettingstarted.htb/theme/Innovation/assets/images/share.png" /></a>
+			</div>
+			<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script>
+		</div>
+	</div>
+	
+	
+	<!-- wrap each sidebar section like this -->
+	<div class="section">
+		<h2>GetSimple Features</h2>
+<ul> 
+<li>XML based data storage</li> 
+<li>Best-in-Class User Interface</li> 
+<li>'Undo' protection &amp; backups</li> 
+<li>Easy to theme</li> 
+<li>Great documentation</li> 
+<li>Growing community</li> 
+</ul>
+<p>This is your sidebar text. Please change me in <em>Theme -> Edit Components</em></p>
+<p><a href="http://get-simple.info/download/">Download the Latest GetSimple</a></p>	</div>
+
+	
+</aside>
+	</div>
+
+<!-- include the footer template -->
+
+	<!-- site footer -->
+	<footer class="clearfix" >
+		
+				
+		<!-- 
+			Theme Credits
+			Please consider keeping the links to the developer and GetSimple if you use this theme
+		-->
+	 	<div class="wrapper">
+			<div class="left">2024 <a href="http://gettingstarted.htb/" >gettingstarted</a></div>
+			<div class="right">Innovation Theme by <a href="http://www.cagintranet.com" >Cagintranet</a> &middot; <a href="http://get-simple.info/" target="_blank" >Powered by  GetSimple</a></div>
+		</div>
+	</footer>
+	 
+</body>
+</html>[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl 10.129.68.89/robots.txt
+[?2004l]0;curl 10.129.68.89/robots.txt - Parrot TerminalUser-agent: *
+Disallow: /admin/[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl 10.129.68.89/robots.txt[K[C[C[C[C[C[Cgobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt[C[C[C[C[C[Ccurl 10.129.68.89[K/robots.txt[C[C[C[C[C[C[K
+[?2004l[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcurl 10.129.68.89/robots.txt[K[C[C[C[C[C[Cgobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
+[?2004l]0;gobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt - Parrot Terminal===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.68.89/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.hta                [33m (Status: 403)[0m [Size: 277]
+[2K/.htaccess           [33m (Status: 403)[0m [Size: 277]
+[2K/.htpasswd           [33m (Status: 403)[0m [Size: 277]
+[2KProgress: 295 / 4724 (6.24%)[2K/admin               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.129.68.89/admin/][0m
+[2KProgress: 598 / 4724 (12.66%)[2K/backups             [36m (Status: 301)[0m [Size: 314][34m [--> http://10.129.68.89/backups/][0m
+[2KProgress: 915 / 4724 (19.37%)[2KProgress: 1261 / 4724 (26.69%)[2K/data                [36m (Status: 301)[0m [Size: 311][34m [--> http://10.129.68.89/data/][0m
+[2KProgress: 1564 / 4724 (33.11%)[2KProgress: 1875 / 4724 (39.69%)[2KProgress: 2195 / 4724 (46.46%)[2K/index.php           [32m (Status: 200)[0m [Size: 5485]
+[2KProgress: 2532 / 4724 (53.60%)[2KProgress: 2855 / 4724 (60.44%)[2K/plugins             [36m (Status: 301)[0m [Size: 314][34m [--> http://10.129.68.89/plugins/][0m
+[2KProgress: 3187 / 4724 (67.46%)[2KProgress: 3533 / 4724 (74.79%)[2K/robots.txt          [32m (Status: 200)[0m [Size: 32]
+[2K/server-status       [33m (Status: 403)[0m [Size: 277]
+[2K/sitemap.xml         [32m (Status: 200)[0m [Size: 431]
+[2KProgress: 3867 / 4724 (81.86%)[2K/theme               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.129.68.89/theme/][0m
+[2KProgress: 4216 / 4724 (89.25%)[2KProgress: 4550 / 4724 (96.32%)[2KProgress: 4723 / 4724 (99.98%)
+===============================================================
+Finished
+===============================================================
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mgobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt[C[C[C[C[C[Ccurl 10.129.68.89/robots.txt[K[K[C[C[C[C[C[Cgobuster dir -u http://10.129.68.89/ -w /usr/share/seclists/Discovery/Web-Content/common.txt[C[C[C[C[C[Ccurl 10.129.68.89[K/robots.txt[K/index.php
+[?2004l]0;curl 10.129.68.89/index.php - Parrot Terminal<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" > <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+  <title>Welcome to GetSimple! - gettingstarted</title>
+	
+	<meta name="robots" content="index, follow">
+
+	<link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+	<link href="http://gettingstarted.htb/theme/Innovation/assets/css/reset.css" rel="stylesheet">
+	<link href="http://gettingstarted.htb/theme/Innovation/style.css?v=3.3.15" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	<!--[if lt IE 7 ]>
+    <script src="http://gettingstarted.htb/theme/Innovation/assets/js/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
+
+	<meta name="keywords" content="getsimple, easy, content management system" />
+<link rel="canonical" href="http://gettingstarted.htb/" />
+	
+</head> 
+<body id="index" >
+	
+	<!-- site header -->
+	<header>
+		<div class="header">
+			<div class="wrapper">
+				
+				<!-- logo/sitename -->
+				<a href="http://gettingstarted.htb/" id="logo" >gettingstarted</a>
+				
+				<!-- main navigation -->
+				<nav id="main-nav">
+					<ul>
+						<li class="index current active"><a href="http://gettingstarted.htb/" title="Welcome to GetSimple!">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<!-- breadcrumbs: only show when NOT on homepage -->
+		<p class="breadcrumbs" >
+			<span class="wrapper">
+				<a href="http://gettingstarted.htb/">Home</a> &nbsp;&nbsp;&#149;&nbsp;&nbsp;  <b>Welcome to GetSimple!</b>
+			</span>
+		</p>
+		
+  </header>	
+	<div class="wrapper clearfix">
+		<!-- page content -->
+		<article>
+			<section>
+				
+				<!-- title and content -->
+				<h1>Welcome to GetSimple!</h1>
+				<p>Thank you for using GetSimple CMS. This is your homepage, so please change this text to be what you want.</p>
+<ul>
+	<li><a href="http://get-simple.info/docs/">GetSimple CMS Documentation</a>
+		<ul>
+				<li><a href="http://get-simple.info/docs/theme-creation">How to Create a GetSimple Theme</a></li>
+		</ul>
+	</li>
+	<li><a href="http://get-simple.info/forums/">GetSimple Support Forums</a></li>
+</ul>
+<h2>Header 2</h2>
+<p>Lorem ipsum <em>dolor sit amet</em>, <strong>consectetur adipiscing elit</strong>. Donec <code>this is code</code> venenatis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate pretium augue.</p>
+<h3>Header 3</h3>
+<pre><code class="language-css">#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}</code></pre>
+<h4>Header 4</h4>
+<ol>
+	<li>Lorem ipsum dolor sit amet</li>
+	<li>Consectetur adipiscing elit</li>
+	<li>Donec ut est risus, placerat venenatis augue</li>
+</ol>
+
+<blockquote>A blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut est risus, placerat venenatis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
+				
+				<!-- page footer -->
+				<div class="footer">
+					<p>Published on <time datetime="2021-02-09" pubdate>February 9th, 2021</time></p>
+				</div>
+			</section>
+			
+		</article>
+		
+		<!-- include the sidebar template -->
+		<aside id="sidebar">
+
+	<div class="section" id="socialmedia" >
+		<h2>Connect</h2>
+		<div class="icons">
+						
+			<img src="http://gettingstarted.htb/theme/Innovation/assets/images/break.png" />
+			
+			<!-- addthis popup - you can add your username if you want analytics: http://www.addthis.com/help/customizing-addthis -->
+			<div class="addthis_toolbox" style="display:inline;width:24px;" >
+				<a href="//www.addthis.com/bookmark.php?v=250" class="addthis_button_compact"><img src="http://gettingstarted.htb/theme/Innovation/assets/images/share.png" /></a>
+			</div>
+			<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script>
+		</div>
+	</div>
+	
+	
+	<!-- wrap each sidebar section like this -->
+	<div class="section">
+		<h2>GetSimple Features</h2>
+<ul> 
+<li>XML based data storage</li> 
+<li>Best-in-Class User Interface</li> 
+<li>'Undo' protection &amp; backups</li> 
+<li>Easy to theme</li> 
+<li>Great documentation</li> 
+<li>Growing community</li> 
+</ul>
+<p>This is your sidebar text. Please change me in <em>Theme -> Edit Components</em></p>
+<p><a href="http://get-simple.info/download/">Download the Latest GetSimple</a></p>	</div>
+
+	
+</aside>
+	</div>
+
+<!-- include the footer template -->
+
+	<!-- site footer -->
+	<footer class="clearfix" >
+		
+				
+		<!-- 
+			Theme Credits
+			Please consider keeping the links to the developer and GetSimple if you use this theme
+		-->
+	 	<div class="wrapper">
+			<div class="left">2024 <a href="http://gettingstarted.htb/" >gettingstarted</a></div>
+			<div class="right">Innovation Theme by <a href="http://www.cagintranet.com" >Cagintranet</a> &middot; <a href="http://get-simple.info/" target="_blank" >Powered by  GetSimple</a></div>
+		</div>
+	</footer>
+	 
+</body>
+</html>[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "nothing on /backups/[K"
+[?2004l]0;echo "nothing on /backups" - Parrot Terminalnothing on /backups
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "found u[Kamin login and password on[K[Kat/[K /data/users/admin.xml"[1@d
+[?2004l]0;echo "found admin login and password at /data/users/admin.xml" - Parrot Terminalfound admin login and password at /data/users/admin.xml
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "admin [7m10.129.68.89[27m[1P10.129.68.8[K[K[K[K[K[K[K[K[K[K[K[K, [K[K[K[K[K[K[Kusername = admin, pwd = [7md033e22ae348aeb5660fc2140aec35850c4da997[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd033e22ae348aeb5660fc2140aec35850c4da997 , looks like a [Kn encru[Kypted password"
+[?2004l]0;echo "username = admin, pwd = d033e22ae348aeb5660fc2140aec35850c4da997 , looks like an encrypted password" - Parrot Terminalusername = admin, pwd = d033e22ae348aeb5660fc2140aec35850c4da997 , looks like an encrypted password
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "found that website uses get simple[K[K[K[K[K[K[K[K[K[KGetSimple CMS[K[K[Kcontent management system of version3.3. 3.3.[C[C[C[C15"
+[?2004l]0;echo "found that website uses GetSimple content management system of version 3.3.15" - Parrot Terminalfound that website uses GetSimple content management system of version 3.3.15
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""d"[1P"f"o"u"n"d" "t"h"i"s" "i"n" "d"a"t"[1P"[1P"[1P"/"d"a"t"a"/"c"a"h"c"e"[1P"[1P"[1P"c"h"e"
+[?2004l]0;echo "found this in /data/cache" - Parrot Terminalfound this in /data/cache
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""r"e"c"o"n"n"n"e"c"t"i"n"g" "t"o" "v"p"n" "c"a"u"s"e" "t"h"e" "p"a"g"e"s" "a"r"e" "n"o"t" "l"o"a"d"i"n"g"
+[?2004l]0;echo "reconnnecting to vpn cause the pages are not loading" - Parrot Terminalreconnnecting to vpn cause the pages are not loading
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "" [1@a[1@f[1@t[1@e[1@r[1@ [1@l[1@o[1@o[1@k[1@i[1@n[1@g[1@ [1@u[1@p[1@ [1@t[1@h[1@e[1@ [1@v[1@e[1@r[1@s[1@i[1@o[1@n[1@ [1@o[1@f[1@ [1@g[1@e[1@t[1@s[1@i[1@m[1@p[1@l[1@e[1@,[1@ [1@d[1@i[1@s[1@c[1@o[1@v[1@e[1@r[1@e[1@d[1@ [1@i[1@t[1@ [1@h[1@a[1@s[1@ [1@r[1@c[1@e[1P[1P[1@e[1@m[1@o[1@t[1@e[1@ [1@c[1@o[1@d[1@e[1@ [1@e[1@x[1@e[1@c[1@u[1@t[1@i[1@o[1@n[1@ [1@v[1@u[1@l[1@n[1@e[1@r[1@a[1@b[1@i[1@l[1@i[1@t[1@y[1@ [1@a[1@n[1@d[1@ [1@i[1@t[1@ [1@i[1P[1@u[1@s[1@e[1@s[1@ [1@s[1@h[1@a[1@1[1@ [C[1@ [1@e[1@n[1@c[1@r[1@y[1@p[1@t[1@i[1@o[1@n[1@m[1P
+[?2004l]0;echo "after looking up the version of getsimple, discovered it has remote code execution vulnerability and it uses sha 1 encryption" - Parrot Terminalafter looking up the version of getsimple, discovered it has remote code execution vulnerability and it uses sha 1 encryption
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "password is admin"
+[?2004l]0;echo "password is admin" - Parrot Terminalpassword is admin
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mgoni[K[K[K[Kecho ""g"o"i"n"f"[1P"g" "t"o" "m"s"f"c"o"n"s"o"l"e"," "w"i"l"l" "k"e"e"p" "s"c"r"e"e"n"s"h"o"t"s"
+[?2004l]0;echo "going to msfconsole, will keep screenshots" - Parrot Terminalgoing to msfconsole, will keep screenshots
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""a"l"s"o" "[1P"[1P"[1P"[1P"[1P"n"d" "a"l"s"o" "a"p"i" "k"e"y" "i"s" "/"d"a"t"a" "i" "t"h"i"n"k"[C[1@/[1@o[1@t[1@h[1@e[1@r[C[1@ [1P[1@/[1@a[1@u[1@t[1@h[1@o[1@r[1@i[1@z[1@a[1@t[1@i[1@o[1@n[1@.[1@x[1@m[1@l[1P[1P think"[1Pthink"[1Phink"[1Pink"[1Pnk"[1Pk"[1P"[1@a
+[?2004l]0;echo "and also api key is /data/other/authorization.xml" - Parrot Terminaland also api key is /data/other/authorization.xml
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mmsfconsole
+[?2004l]0;msfconsole - Parrot TerminalMetasploit tip: After running db_nmap, be sure to check out the result 
+of hosts and services
+[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting The Metasploit Framework console.../[*] Starting tHe Metasploit Framework console...-[*] Starting thE Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting the metasploit Framework console.../[*] Starting the MEtasploit Framework console...-[*] Starting the MeTasploit Framework console...\[*] Starting the MetAsploit Framework console...|[*] Starting the MetaSploit Framework console.../[*] Starting the MetasPloit Framework console...-[*] Starting the MetaspLoit Framework console...\[*] Starting the MetasplOit Framework console...|[*] Starting the MetasploIt Framework console.../[*] Starting the MetasploiT Framework console...-[*] Starting the Metasploit Framework console...\[*] Starting the Metasploit framework console...|[*] Starting the Metasploit FRamework console.../[*] Starting the Metasploit FrAmework console...-[*] Starting the Metasploit FraMework console...\[*] Starting the Metasploit FramEwork console...|[*] Starting the Metasploit FrameWork console.../[*] Starting the Metasploit FramewOrk console...-[*] Starting the Metasploit FramewoRk console...\[*] Starting the Metasploit FrameworK console...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework Console...-[*] Starting the Metasploit Framework cOnsole...\[*] Starting the Metasploit Framework coNsole...|[*] Starting the Metasploit Framework conSole.../[*] Starting the Metasploit Framework consOle...-[*] Starting the Metasploit Framework consoLe...\[*] Starting the Metasploit Framework consolE...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|                                                  
+[0m[36m[0m                                   ___          ____
+                               ,-""   `.[33m      [37m< HONK >
+                             ,'  _   e [33m)`-._[37m /  ----
+                            /  ,' `-._[33m<.===-'[37m
+                           /  /
+                          /  ;
+              _          /   ;
+ (`._    _.-"" ""--..__,'    |
+ <_  `-""                     \
+  <`-                          :
+   (__   <__.                  ;
+     `-.   '-.__.      _.'    /
+        \      `-.__,-'    _,'
+         `._    ,    /__,-'
+            ""._\__,'[33m< <____[37m
+                 [33m| |  `----.`.
+[37m                 [33m| |        \ `.
+[37m                 [33m; |___      \-``
+[37m                 [33m\   --<
+[37m                  [33m`.`.<
+[37m                    [33m`-'
+[37m
+[0m
+
+       =[ [33mmetasploit v6.4.39-dev[0m                          ]
++ -- --=[ 2474 exploits - 1275 auxiliary - 431 post       ]
++ -- --=[ 1475 payloads - 49 encoders - 13 nops           ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+
+s [?1034h[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) [1m[37m>>[0m search g[KGet [KSimple 3.3.15
+[0m
+Matching Modules
+================
+
+   #  Name                                              Disclosure Date  Rank       Check  Description
+   -  ----                                              ---------------  ----       -----  -----------
+   0  exploit/multi/http/[45mgetsimple[0mcms_unauth_code_exec  2019-04-28       [32mexcellent[0m  Yes    [45mGetSimple[0mCMS Unauthenticated RCE
+
+
+Interact with a module by name or index. For example [32minfo 0[0m, [32muse 0[0m or [32muse exploit/multi/http/getsimplecms_unauth_code_exec[0m
+
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) [1m[37m>>[0m use 0
+[0m[1m[34m[*][0m No payload configured, defaulting to php/meterpreter/reverse_tcp
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m info
+[0m
+       Name: GetSimpleCMS Unauthenticated RCE
+     Module: exploit/multi/http/getsimplecms_unauth_code_exec
+   Platform: PHP
+       Arch: php
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2019-04-28
+
+Provided by:
+  truerand0m
+
+Available targets:
+      Id  Name
+      --  ----
+  =>  0   GetSimpleCMS 3.3.15 and before
+
+Check supported:
+  Yes
+
+Basic options:
+  Name       Current Setting  Required  Description
+  ----       ---------------  --------  -----------
+  Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+  RHOSTS                      yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+  RPORT      80               yes       The target port (TCP)
+  SSL        false            no        Negotiate SSL/TLS for outgoing connections
+  TARGETURI  /                yes       The base path to the cms
+  VHOST                       no        HTTP server virtual host
+
+Payload information:
+  Avoid: 1 characters
+
+Description:
+  This module exploits a vulnerability found in GetSimpleCMS,
+  which allows unauthenticated attackers to perform Remote Code Execution.
+  An arbitrary file upload (PHPcode for example) vulnerability can be triggered by an authenticated user,
+  however authentication can be bypassed by leaking the cms API key to target the session manager.
+
+References:
+  https://nvd.nist.gov/vuln/detail/CVE-2019-11231
+  https://ssd-disclosure.com/archives/3899/ssd-advisory-getcms-unauthenticated-remote-code-execution
+
+
+View the full module info with the [32minfo -d[0m command.
+
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m set RHOSTS http://10.129.68.89/admin/[K[K[K[K[K[K[K[P10.129.68.89[P10.129.68.89[P10.129.68.89[P10.129.68.89[P10.129.68.89[P10.129.68.89[P10.129.68.89
+[0mRHOSTS => 10.129.68.89
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m set TARGETURI /admin
+[0mTARGETURI => /admin
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m chech[Kk
+[0m[1m[34m[*][0m 10.129.68.89:80 - The target is not exploitable.
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m info
+[0m
+       Name: GetSimpleCMS Unauthenticated RCE
+     Module: exploit/multi/http/getsimplecms_unauth_code_exec
+   Platform: PHP
+       Arch: php
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2019-04-28
+
+Provided by:
+  truerand0m
+
+Available targets:
+      Id  Name
+      --  ----
+  =>  0   GetSimpleCMS 3.3.15 and before
+
+Check supported:
+  Yes
+
+Basic options:
+  Name       Current Setting  Required  Description
+  ----       ---------------  --------  -----------
+  Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+  RHOSTS     10.129.68.89     yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+  RPORT      80               yes       The target port (TCP)
+  SSL        false            no        Negotiate SSL/TLS for outgoing connections
+  TARGETURI  /admin           yes       The base path to the cms
+  VHOST                       no        HTTP server virtual host
+
+Payload information:
+  Avoid: 1 characters
+
+Description:
+  This module exploits a vulnerability found in GetSimpleCMS,
+  which allows unauthenticated attackers to perform Remote Code Execution.
+  An arbitrary file upload (PHPcode for example) vulnerability can be triggered by an authenticated user,
+  however authentication can be bypassed by leaking the cms API key to target the session manager.
+
+References:
+  https://nvd.nist.gov/vuln/detail/CVE-2019-11231
+  https://ssd-disclosure.com/archives/3899/ssd-advisory-getcms-unauthenticated-remote-code-execution
+
+
+View the full module info with the [32minfo -d[0m command.
+
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m infocheck[Pinfocheckset TARGETURI /admin/theme-edit.php
+[0mTARGETURI => /admin/theme-edit.php
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m set TARGETURI /admin/theme-edit.phpinfo[Kcheck
+[0m[1m[34m[*][0m 10.129.68.89:80 - The target is not exploitable.
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m checkset TARGETURI /admin/theme-edit.php[K[K[K[K[K[K[K[K[K[K[K[K[K[Kupload.php
+[0mTARGETURI => /admin/upload.php
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m set TARGETURI /admin/upload.phpcheck[K
+[0m[1m[34m[*][0m 10.129.68.89:80 - The target is not exploitable.
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m check
+[0m[1m[34m[*][0m 10.129.68.89:80 - The target is not exploitable.
+[[32mmsf[0m]([33mJobs[0m:[37m0[0m [36mAgents[0m:[37m0[0m) exploit([1m[31mmulti/http/getsimplecms_unauth_code_exec[0m) [1m[37m>>[0m exit
+[0m[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""i" "l"o"f"[1P"g"g"e"d" "i"n" "b"u"t" "i" "a"m" "h"a"v"i"n"g" "i"s"s"u"e"s" "w"i"t"h" "t"h"e" "v"p"n" "i" "g"u"e"s"s"," "s"o" "r"[1P"d"o"w"n"l"o"a"d"i"n"g" "a"n"d" "c"o"n"n"e"c"t"i"n"g" "a"g"a"i"n"
+[?2004l]0;echo "i logged in but i am having issues with the vpn i guess, so downloading and connecting again" - Parrot Terminali logged in but i am having issues with the vpn i guess, so downloading and connecting again
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""i" "a"m" "r"e"s"t"a"r"t"i"n"g" "t"h"e" "V"M" "[1P"[1P"[1P"m"a"c"h"i"n"e" "c"u"z" "i" "h"a"v"e" "[1P" "t"r"o"u"b"l"e" "v"i"s"i"t"i"n"g" "p"a"g"e"s"," "n"o"t" "v"p"n" "i"s"s"u"e"
+[?2004l]0;echo "i am restarting the machine cuz i have trouble visiting pages, not vpn issue" - Parrot Terminali am restarting the machine cuz i have trouble visiting pages, not vpn issue
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""s"c"r"u"[1P"i"p"t" "c"o"n"t"i"n"u"e"d" "i"n" "n"e"w" "[1P"[1P"[1P"[1P"p"a"r"t"2"[C[1P[1P[1P[1P[1P[1P[1@l[1@o[1@g
+[?2004l]0;echo "log continued in part2" - Parrot Terminallog continued in part2
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2024-12-30 11:19:34-05:00 [COMMAND_EXIT_CODE="0"]
