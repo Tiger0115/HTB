@@ -1,0 +1,172 @@
+Script started on 2025-01-04 09:19:11-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="35"]
+]0;export PATH="$PATH:/home/tiger/.local/bin" - Parrot Terminal]0;export PATH="$HOME/.local/bin:$PATH" - Parrot Terminal[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexitcho "answer =210"[C[C[C[C[C[C[Cxit[Kcho "answer =210"[C[C[C[C[C[Ccurl "http://83.136.253.216:40958/ur-hiddenmember/backup.tar.gz" -I[C[C[C[C[C[C[17Pecho "on visiting this url we see a backup.tar.gz"[C[C[C[C[C[Ccurl "http://83.136.253.216:40958/ur-hiddenmember/backup.tar.gz" -I[C[C[C[C[C[Cecho "answer =210"[K[C[C[C[C[C[C[Cxit[K[Kgobuster dir -u http://[7m94.237.51.60:33161[27m94.237.51.60:33161/ -w /usr/share/seclists/Discovery/Web-Content/cop[Kmmon.txt
+[?2004l]0;gobuster dir -u http://94.237.51.60:33161/ -w /usr/share/seclists/Discovery/Web-Content/common.txt - Parrot Terminal===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://94.237.51.60:33161/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2KProgress: 23 / 4724 (0.49%)[2KProgress: 85 / 4724 (1.80%)[2KProgress: 147 / 4724 (3.11%)[2KProgress: 208 / 4724 (4.40%)[2KProgress: 268 / 4724 (5.67%)[2KProgress: 324 / 4724 (6.86%)[2KProgress: 385 / 4724 (8.15%)[2KProgress: 442 / 4724 (9.36%)[2KProgress: 504 / 4724 (10.67%)[2KProgress: 564 / 4724 (11.94%)[2KProgress: 626 / 4724 (13.25%)[2KProgress: 682 / 4724 (14.44%)[2KProgress: 745 / 4724 (15.77%)[2KProgress: 806 / 4724 (17.06%)[2KProgress: 866 / 4724 (18.33%)[2KProgress: 927 / 4724 (19.62%)[2KProgress: 986 / 4724 (20.87%)[2KProgress: 1047 / 4724 (22.16%)[2KProgress: 1108 / 4724 (23.45%)[2KProgress: 1168 / 4724 (24.72%)[2KProgress: 1229 / 4724 (26.02%)[2KProgress: 1281 / 4724 (27.12%)[2KProgress: 1345 / 4724 (28.47%)[2K/czcmdcvt            [32m (Status: 200)[0m [Size: 22]
+[2KProgress: 1405 / 4724 (29.74%)[2KProgress: 1468 / 4724 (31.08%)[2KProgress: 1528 / 4724 (32.35%)[2K/docs                [32m (Status: 200)[0m [Size: 931]
+[2KProgress: 1588 / 4724 (33.62%)[2KProgress: 1646 / 4724 (34.84%)[2KProgress: 1707 / 4724 (36.13%)[2KProgress: 1769 / 4724 (37.45%)[2KProgress: 1830 / 4724 (38.74%)[2KProgress: 1890 / 4724 (40.01%)[2KProgress: 1950 / 4724 (41.28%)[2KProgress: 2010 / 4724 (42.55%)[2KProgress: 2070 / 4724 (43.82%)[2KProgress: 2129 / 4724 (45.07%)[2KProgress: 2186 / 4724 (46.27%)[2KProgress: 2246 / 4724 (47.54%)[2KProgress: 2307 / 4724 (48.84%)[2K/items               [36m (Status: 307)[0m [Size: 0][34m [--> http://94.237.51.60:33161/items/][0m
+[2KProgress: 2368 / 4724 (50.13%)[2KProgress: 2424 / 4724 (51.31%)[2KProgress: 2486 / 4724 (52.62%)[2KProgress: 2546 / 4724 (53.90%)[2KProgress: 2606 / 4724 (55.17%)[2KProgress: 2667 / 4724 (56.46%)[2KProgress: 2723 / 4724 (57.64%)[2KProgress: 2783 / 4724 (58.91%)[2KProgress: 2845 / 4724 (60.22%)[2KProgress: 2906 / 4724 (61.52%)[2KProgress: 2964 / 4724 (62.74%)[2KProgress: 3021 / 4724 (63.95%)[2KProgress: 3078 / 4724 (65.16%)[2KProgress: 3139 / 4724 (66.45%)[2KProgress: 3198 / 4724 (67.70%)[2KProgress: 3260 / 4724 (69.01%)[2KProgress: 3318 / 4724 (70.24%)[2KProgress: 3379 / 4724 (71.53%)[2KProgress: 3439 / 4724 (72.80%)[2KProgress: 3500 / 4724 (74.09%)[2KProgress: 3560 / 4724 (75.36%)[2KProgress: 3622 / 4724 (76.67%)[2K/search              [33m (Status: 422)[0m [Size: 91]
+[2KProgress: 3679 / 4724 (77.88%)[2KProgress: 3740 / 4724 (79.17%)[2KProgress: 3801 / 4724 (80.46%)[2KProgress: 3858 / 4724 (81.67%)[2KProgress: 3920 / 4724 (82.98%)[2KProgress: 3980 / 4724 (84.25%)[2KProgress: 4036 / 4724 (85.44%)[2KProgress: 4095 / 4724 (86.69%)[2KProgress: 4153 / 4724 (87.91%)[2KProgress: 4213 / 4724 (89.18%)[2KProgress: 4276 / 4724 (90.52%)[2KProgress: 4336 / 4724 (91.79%)[2KProgress: 4398 / 4724 (93.10%)[2KProgress: 4454 / 4724 (94.28%)[2KProgress: 4513 / 4724 (95.53%)[2KProgress: 4575 / 4724 (96.85%)[2KProgress: 4635 / 4724 (98.12%)[2KProgress: 4697 / 4724 (99.43%)[2KProgress: 4723 / 4724 (99.98%)
+===============================================================
+Finished
+===============================================================
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing[0;31m]
+[0;31m└──╼ [0m[01;33m$[0meec[K[Kcho "go to /docs and explore tht[Ke available apis"
+[?2004l]0;echo "go to /docs and explore the available apis" - Parrot Terminalgo to /docs and explore the available apis
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mg[7mit clone https://github.com/PandaSt0rm/webfuzz_api.git[27m[C[C[C[C[C[C[Cit clone https://github.com/PandaSt0rm/webfuzz_api.git
+[?2004l]0;git clone https://github.com/PandaSt0rm/webfuzz_api.git - Parrot TerminalCloning into 'webfuzz_api'...
+remote: Enumerating objects: 8, done.[K
+remote: Counting objects:  12% (1/8)[Kremote: Counting objects:  25% (2/8)[Kremote: Counting objects:  37% (3/8)[Kremote: Counting objects:  50% (4/8)[Kremote: Counting objects:  62% (5/8)[Kremote: Counting objects:  75% (6/8)[Kremote: Counting objects:  87% (7/8)[Kremote: Counting objects: 100% (8/8)[Kremote: Counting objects: 100% (8/8), done.[K
+remote: Compressing objects:  20% (1/5)[Kremote: Compressing objects:  40% (2/5)[Kremote: Compressing objects:  60% (3/5)[Kremote: Compressing objects:  80% (4/5)[Kremote: Compressing objects: 100% (5/5)[Kremote: Compressing objects: 100% (5/5), done.[K
+remote: Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)[K
+Receiving objects:  12% (1/8)Receiving objects:  25% (2/8)Receiving objects:  37% (3/8)Receiving objects:  50% (4/8)Receiving objects:  62% (5/8)Receiving objects:  75% (6/8)Receiving objects:  87% (7/8)Receiving objects: 100% (8/8)Receiving objects: 100% (8/8), 5.13 KiB | 5.13 MiB/s, done.
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mc[7md webfuzz_api[27m[C[C[C[C[C[C[Cd webfuzz_api
+[?2004l]0;cd webfuzz_api - Parrot Terminal[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m[7mpip3 install -r requirements.txt[27m[C[C[C[C[C[Cpip3 install -r requirements.txt
+[?2004l]0;pip3 install -r requirements.txt - Parrot Terminal[1;31merror[0m: [1mexternally-managed-environment[0m
+
+[31m×[0m This environment is externally managed
+[31m╰─>[0m To install Python packages system-wide, try apt install
+[31m   [0m python3-xyz, where xyz is the package you are trying to
+[31m   [0m install.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian-packaged Python package,
+[31m   [0m create a virtual environment using python3 -m venv path/to/venv.
+[31m   [0m Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+[31m   [0m sure you have python3-full installed.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian packaged Python application,
+[31m   [0m it may be easiest to use pipx install xyz, which will manage a
+[31m   [0m virtual environment for you. Make sure you have pipx installed.
+[31m   [0m 
+[31m   [0m See /usr/share/doc/python3.11/README.venv for more information.
+
+[1;35mnote[0m: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+[1;36mhint[0m: See PEP 668 for the detailed specification.
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mcat requirements.txt
+[?2004l]0;cat requirements.txt - Parrot Terminalrequests 
+colorama[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m[7mpipx install requests colorama[27m
+[A[C[C[C[C[C[Cpipx install requests colorama
+[A
+[?2004l]0;pipx install requests colorama - Parrot Terminal[?25lusage: pipx [-h] [--version] {install,inject,upgrade,upgrade-all,uninstall,uninstall-all,reinstall,reinstall-all,list,run,runpip,ensurepath,environment,completions} ...
+pipx: error: unrecognized arguments: colorama
+[?25h[0m[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mpipx install requests colorama\[K[K[K[K[K[K[K[K[K[K
+[?2004l]0;pipx install requests - Parrot Terminal[?25l[K[K⣷ creating virtual environment[K[K[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[KNote: Dependent package 'charset-normalizer' contains 1 apps
+  - normalizer
+
+No apps associated with package requests. Try again with '--include-deps' to include apps of dependent packages, which are listed above. If you are attempting to install a library, pipx
+should not be used. Consider using pip or a similar tool instead."
+[?25h[0m[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mpipx install requests --include-deps
+[?2004l]0;pipx install requests --include-deps - Parrot Terminal[?25l[K[K⣷ creating virtual environment[K[K[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[K
+[?25hTraceback (most recent call last):
+  File "/usr/bin/pipx", line 8, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 819, in cli
+    return run_pipx_command(parsed_pipx_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 202, in run_pipx_command
+    return commands.install(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/commands/install.py", line 69, in install
+    run_post_install_actions(
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 396, in run_post_install_actions
+    expose_apps_globally(
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 58, in expose_apps_globally
+    _symlink_package_apps(local_bin_dir, app_paths, force=force, suffix=suffix)
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 145, in _symlink_package_apps
+    symlink_path.symlink_to(app_path)
+  File "/usr/lib/python3.11/pathlib.py", line 1199, in symlink_to
+    os.symlink(target, self, target_is_directory)
+PermissionError: [Errno 13] Permission denied: '/home/tiger/.local/pipx/venvs/requests/bin/normalizer' -> '/home/tiger/.local/bin/normalizer'
+[0m[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msudApipx install requests --include-deps[1@s[1@d[1P[1@u[1@d[1@ [1@o[1P[1P[1@o[1@ 
+[?2004l]0;sudo pipx install requests --include-deps - Parrot Terminal[sudo] password for tiger: 
+[?25l[K[K⣷ creating virtual environment[K[K[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[K⣷ installing requests[K[K⣯ installing requests[K[K⣟ installing requests[K[K⡿ installing requests[K[K⢿ installing requests[K[K⣻ installing requests[K[K⣽ installing requests[K[K⣾ installing requests[K[K⚠️  Note: normalizer was already on your PATH at /usr/bin/normalizer
+  installed package [1mrequests[0m [1m2.32.3[0m, installed using Python 3.11.2
+  These apps are now globally available
+    - normalizer
+⚠️  Note: '/root/.local/bin' is not on your PATH environment variable. These apps will not be globally accessible until your PATH is updated. Run `pipx ensurepath` to automatically add it,
+    or manually modify your PATH in your shell's config file (i.e. ~/.bashrc).
+done! ✨ 🌟 ✨
+[?25h[0m[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msudo pipx ensurepath
+[?2004l]0;sudo pipx ensurepath - Parrot Terminal[?25l/root/.local/bin has been been added to PATH, but you need to open a new terminal or re-login for this PATH change to take effect.
+
+You will need to open a new terminal or re-login for the PATH changes to take effect.
+
+Otherwise pipx is ready to go! ✨ 🌟 ✨
+[?25h[0m[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msudo pipx ensurepathinstall requests --include-deps[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K colorama[K --include-deps[C[C[C[C[C[C[5@sudo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P --include-deps[1P --include-deps[1P --include-deps[1P --include-deps[1P --include-deps[1P --include-deps[1P --include-deps[1P --include-depsc --include-depso --include-depsl --include-depso --include-depsr --include-depsa --include-depsm --include-depsa --include-deps
+[?2004l]0;sudo pipx install colorama --include-deps - Parrot Terminal[?25l[K[K⣷ creating virtual environment[K[K[K[K⣷ installing colorama[K[K⣯ installing colorama[K[K⣟ installing colorama[K[K⡿ installing colorama[K[K⢿ installing colorama[K[K⣻ installing colorama[K[K⣽ installing colorama[K[K⣾ installing colorama[K[K⣷ installing colorama[K[K⣯ installing colorama[K[K⣟ installing colorama[K[K⡿ installing colorama[K[K
+No apps associated with package colorama or its dependencies. If you are attempting to install a library, pipx should not be used. Consider using pip or a similar tool instead.
+[?25h[0m[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msudo pipx install colorama --include-deps[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Censurepath[Kinstall colorama --include-deps[1P[1@3
+[?2004l]0;sudo pip3 install colorama --include-deps - Parrot Terminal
+Usage:   
+  pip3 install [options] <requirement specifier> [package-index-options] ...
+  pip3 install [options] -r <requirements file> [package-index-options] ...
+  pip3 install [options] [-e] <vcs project url> ...
+  pip3 install [options] [-e] <local project path> ...
+  pip3 install [options] <archive url/path> ...
+
+no such option: --include-deps
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msudo pip3 install colorama --include-deps[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l]0;sudo pip3 install colorama - Parrot Terminal[1;31merror[0m: [1mexternally-managed-environment[0m
+
+[31m×[0m This environment is externally managed
+[31m╰─>[0m To install Python packages system-wide, try apt install
+[31m   [0m python3-xyz, where xyz is the package you are trying to
+[31m   [0m install.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian-packaged Python package,
+[31m   [0m create a virtual environment using python3 -m venv path/to/venv.
+[31m   [0m Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+[31m   [0m sure you have python3-full installed.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian packaged Python application,
+[31m   [0m it may be easiest to use pipx install xyz, which will manage a
+[31m   [0m virtual environment for you. Make sure you have pipx installed.
+[31m   [0m 
+[31m   [0m See /usr/share/doc/python3.11/README.venv for more information.
+
+[1;35mnote[0m: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+[1;36mhint[0m: See PEP 668 for the detailed specification.
+[?2004h[0;31m┌─[[0;31m✗[0;37m]─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0msu[K[Kapt[K[K[Ksudo apt-inst[K[K[K[K[K install python3-colorama
+[?2004l]0;sudo apt install python3-colorama - Parrot TerminalReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+python3-colorama is already the newest version (0.4.6-2).
+python3-colorama set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mecho "exiting and starting th[Khe terminal again [K. So part2 of api fuzzing"
+[?2004l]0;echo "exiting and starting the terminal again. So part2 of api fuzzing" - Parrot Terminalexiting and starting the terminal again. So part2 of api fuzzing
+[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0m
+[?2004l[?2004h[0;31m┌─[[0;39mtiger[01;33m@[01;96mparrot[0;31m]─[[0;32m~/Desktop/HTB/Web_Fuzzing/webfuzz_api[0;31m]
+[0;31m└──╼ [0m[01;33m$[0mexit
+[?2004l]0;exit - Parrot Terminalexit
+
+Script done on 2025-01-04 09:25:34-05:00 [COMMAND_EXIT_CODE="0"]
