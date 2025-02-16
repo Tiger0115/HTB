@@ -43,8 +43,9 @@ int main()
     if(access(dir1, R_OK)==0)
     {
         printf("We have access \n");
+        flag=true;
     }
-    else
+    if(!flag)
     {
         printf("Setting our UID to RES Jim \n")
 
@@ -55,7 +56,29 @@ int main()
         }
         
     }
+    if(!flag)
+    {
+        printf("Setting our UID to RES Judy \n")
 
+        if(setresuid(judy,judy,judy)==0 && access(dir1, R_OK)==0)
+        {
+            printf("We have access \n");
+            flag=true;
+        }
+    }
+    if(!flag)
+    {
+        printf("Setting our UID to RES john \n")
+
+        if(setresuid(john,john,john)==0 && access(dir1, R_OK)==0)
+        {
+            printf("We have access \n");
+            flag=true;
+        }
+    }
+
+    int ch=chmod(dir1, 0400 );
+    int cho=chmod(dir1,  );
     
     return 0;
 }
